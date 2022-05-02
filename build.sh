@@ -3,7 +3,7 @@
 set -e
 . build_common.sh
 PYTHON_COMMAND=python2.7
-
+rm -rf workspace/Build/F11/DEBUG_GCC5/FV/Ffs/7E374E25-8E01-4FEE-87F2-390C23C606CDFVMAIN
 # not actually GCC5; it's GCC7 on Ubuntu 18.04.
 GCC5_AARCH64_PREFIX= build -s -n 0 -a AARCH64 -t GCC5 -p F11/F11.dsc
 
