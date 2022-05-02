@@ -13,6 +13,8 @@
 #
 #
 
+!include F11/Library/SimpleInit/SimpleInit.inc
+
 [LibraryClasses.common]
 !if $(TARGET) == RELEASE
   DebugLib|MdePkg/Library/BaseDebugLibSerialPort/BaseDebugLibSerialPort.inf
@@ -322,6 +324,8 @@
   gEmbeddedTokenSpaceGuid.PcdTimerPeriod|10000
   gArmTokenSpaceGuid.PcdVFPEnabled|1
   gEfiMdePkgTokenSpaceGuid.PcdUartDefaultReceiveFifoDepth|32
+
+  gSimpleInitTokenSpaceGuid.PcdDeviceTreeStore|0x83300000
 
 [PcdsDynamicHii.common.DEFAULT]
   gEfiMdePkgTokenSpaceGuid.PcdPlatformBootTimeOut|L"Timeout"|gEfiGlobalVariableGuid|0x0|0 # Variable: L"Timeout"

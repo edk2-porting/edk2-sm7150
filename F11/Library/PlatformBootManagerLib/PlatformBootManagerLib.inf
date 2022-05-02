@@ -40,6 +40,7 @@
   MdePkg/MdePkg.dec
   ShellPkg/ShellPkg.dec
   F11/F11.dec
+  SimpleInit.dec
 
 [BuildOptions.AARCH64]
   GCC:*_*_*_CC_FLAGS = -Wno-unused-variable
@@ -79,6 +80,7 @@
   gEfiFileSystemVolumeLabelInfoIdGuid
   gEfiEndOfDxeEventGroupGuid
   gEfiTtyTermGuid
+  gSimpleInitFileGuid
   gUefiShellFileGuid
 
 [Protocols]
