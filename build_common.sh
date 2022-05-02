@@ -24,9 +24,11 @@ export CLANG38_AARCH64_PREFIX="${CROSS_COMPILE}"
 export PACKAGES_PATH="$_EDK2:$_EDK2_PLATFORMS:$_SIMPLE_INIT:$PWD"
 export WORKSPACE="${PWD}"
 
-. ../edk2/edksetup.sh
+. "${_EDK2}"/edksetup.sh
 
 mkdir -p "${_SIMPLE_INIT}/build"
-bash "${_SIMPLE_INIT}/scripts/gen-rootfs-source.sh" \
+sudo bash "${_SIMPLE_INIT}/scripts/gen-rootfs-source.sh" \
 	"${_SIMPLE_INIT}" \
 	"${_SIMPLE_INIT}/build"
+
+make -C "${_EDK2}"/BaseTools/Source/C
